@@ -1,0 +1,40 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<!-- Mirrored from dev.lorvent.com/admire/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Dec 2016 17:20:23 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | ATG</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/logo1.ico" />
+
+    <!--global styles-->
+    <link type="text/css" rel="stylesheet" href="{% static 'app/css/components.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'app/css/custom.css' %}" />
+    <!-- end of global styles-->
+    <link type="text/css" rel="stylesheet" href="{% static 'app/vendors/c3/css/c3.min.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'app/css/pages/new_dashboard.css' %}" />
+    <link type="text/css" rel="stylesheet" href="{% static 'app/css/pages/login.css' %}" />
+
+
+</head>
+
+<body class="body">
+    
+    {% block main-content %} {% endblock main-content %}
+
+ <!-- /#wrap -->
+    <!-- global scripts-->
+    <script type="text/javascript" src="{% static 'app/js/components.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app/js/custom.js' %}"></script>  
+    <script type="text/javascript" src="{% static 'app/js/pages/new_dashboard.js' %}"></script>
+    <script type="text/javascript" src="{% static 'app/js/pages/register.js' %}"></script>
+
+</body>
+
+<!-- Mirrored from dev.lorvent.com/admire/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 17 Dec 2016 17:21:10 GMT -->
+</html>
+

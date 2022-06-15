@@ -1,0 +1,688 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block main-content %}
+
+    <div class="bg-dark" id="wrap">
+        <div id="top">
+            <!-- .navbar -->
+            <nav class="navbar navbar-static-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-xs-center" href="index.html">
+                        <h4 class="text-white">
+                            ATG ADMIN</h4>
+                    </a>
+                    <div class="menu">
+                        <span class="toggle-left" id="menu-toggle">
+                            <i class="fa fa-bars text-white"></i>
+                        </span>
+                    </div>
+
+                    <!-- Toggle Button -->
+                    <div class="text-xs-right xs_menu">
+                        <button class="navbar-toggler hidden-xs-up" type="button" data-toggle="collapse"
+                            data-target="#nav-content">
+                            ☰
+                   
+                        </button>
+                    </div>
+                    <!-- Nav Content -->
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="topnav dropdown-menu-right float-xs-right">
+                        <div class="btn-group">
+                            <div class="notifications no-bg">
+                                <a class="btn btn-default btn-sm messages message_tour" data-toggle="dropdown"><i
+                                    class="fa fa-envelope fa-1x text-white"></i>
+                                    <!--<span class="bg-warning message_tags">4</span>-->
+                                    <span class="tag tag-warning">8</span>
+                                </a>
+                                <div class="dropdown-menu drop_box_align" role="menu">
+                                    <div class="popover-title">You have 8 Messages</div>
+                                    <div id="messages">
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/5.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <strong>hally</strong>
+                                                sent you an image.
+                                           
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/8.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <strong>Meri</strong>
+                                                invitation for party.
+                                           
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/7.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <strong>Remo</strong>
+                                                meeting details .
+                                           
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/6.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <strong>David</strong>
+                                                upcoming events list.
+                                           
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/5.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <strong>hally</strong>
+                                                sent you an image.
+                                           
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/8.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <strong>Meri</strong>
+                                                invitation for party.
+                                           
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/7.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <strong>Remo</strong>
+                                                meeting details .
+                                           
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/6.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <strong>David</strong>
+                                                upcoming events list.
+                                           
+                                                <br>
+                                                <small>add to timeline</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="popover-footer">
+                                        <a href="mail_inbox.html">Inbox</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <div class="notifications messages no-bg notification_tour">
+                                <a class="btn btn-default btn-sm" data-toggle="dropdown"><i
+                                    class="fa fa-bell text-white"></i>
+                                    <!--<span class="bg-danger notification_tags">4</span>-->
+                                    <span class="tag tag-danger">9</span>
+                                </a>
+                                <div class="dropdown-menu drop_box_align" role="menu">
+                                    <div class="popover-title">You have 9 Notifications</div>
+                                    <div id="notifications">
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/1.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Remo</strong>
+                                                sent you an image
+                                           
+                                                <br>
+                                                <small class="primary_txt">just now.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/2.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>clay</strong>
+                                                business propasals
+                                           
+                                                <br>
+                                                <small class="primary_txt">20min Back.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/3.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>John</strong>
+                                                meeting at Ritz
+                                           
+                                                <br>
+                                                <small class="primary_txt">2hrs Back.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/6.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Luicy</strong>
+                                                Request Invitation
+                                           
+                                                <br>
+                                                <small class="primary_txt">Yesterday.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/1.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Remo</strong>
+                                                sent you an image
+                                           
+                                                <br>
+                                                <small class="primary_txt">just now.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/2.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>clay</strong>
+                                                business propasals
+                                           
+                                                <br>
+                                                <small class="primary_txt">20min Back.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/3.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>John</strong>
+                                                meeting at Ritz
+                                           
+                                                <br>
+                                                <small class="primary_txt">2hrs Back.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/6.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Luicy</strong>
+                                                Request Invitation
+                                           
+                                                <br>
+                                                <small class="primary_txt">Yesterday.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                        <div class="data">
+                                            <div class="col-xs-2">
+                                                <img src="img/mailbox_imgs/1.jpg" class="message-img avatar" alt="avatar1">
+                                            </div>
+                                            <div class="col-xs-10 message-data">
+                                                <i class="fa fa-clock-o"></i>
+                                                <strong>Remo</strong>
+                                                sent you an image
+                                           
+                                                <br>
+                                                <small class="primary_txt">just now.</small>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popover-footer">
+                                        <a href="#">View All</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn-group">
+                            <a class="btn btn-default btn-sm messages toggle-right" id="right-toggle">&nbsp;
+                           
+                                <i class="fa fa-cog text-white"></i>
+                                &nbsp;
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <div class="user-settings no-bg">
+                                <button type="button" class="btn btn-default no-bg micheal_btn" data-toggle="dropdown">
+                                    <strong>{{usr.first_name}}</strong>
+                                    <span class="fa fa-sort-down white_bg"></span>
+                                </button>
+                                <div class="dropdown-menu admire_admin">
+                                    <a class="dropdown-item title" href="#">Admire Admin</a>
+                                    <a class="dropdown-item" href="edit_user.html"><i class="fa fa-cogs"></i>
+                                        Account Settings</a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fa fa-user"></i>
+                                        User Status
+                                    </a>
+                                    <a class="dropdown-item" href="mail_inbox.html"><i class="fa fa-envelope"></i>
+                                        Inbox</a>
+
+                                    <a class="dropdown-item" href="lockscreen.html"><i class="fa fa-lock"></i>
+                                        Lock Screen</a>
+                                    <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out"></i>
+                                        Log Out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collapse navbar-toggleable-sm col-xl-6 col-lg-6 hidden-md-down float-xl-right  top_menu"
+                        id="nav-content">
+                        <ul class="nav navbar-nav top_menubar">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="mail_inbox.html">
+                                    <i class="fa fa-inbox"></i><span class="quick_text">Inbox</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="mail_compose.html">
+                                    <i class="fa fa fa-edit"></i><span class="quick_text">Compose</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="maps.html">
+                                    <i class="fa fa-map-marker"></i><span class="quick_text">Maps</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="gallery.html">
+                                    <i class="fa fa-picture-o"></i><span class="quick_text">Gallery</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- /.container-fluid -->
+            </nav>
+            <!-- /.navbar -->
+            <!-- /.head -->
+        </div>
+        <!-- /#top -->
+        <div class="wrapper">
+            <div id="left">
+                <div class="media user-media bg-dark dker">
+                    <div class="user-media-toggleHover">
+                        <span class="fa fa-user"></span>
+                    </div>
+                    <div class="user-wrapper bg-dark">
+                        <a class="user-link" href="#">
+                            <h3 class="text-white user-info ml-2">Welcome, {{usr.first_name}}</h3>
+                        </a>
+                        <div class="search_bar col-lg-12">
+                            <div class="input-group">
+                                <input type="search" class="form-control" placeholder="search">
+                                <span class="input-group-btn">
+                                    <button class="btn without_border" type="button">
+                                        <span class="fa fa-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- #menu -->
+                <ul id="menu" class="bg-blue dker">
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="fa fa-home"></i>
+                            <span class="link-title">&nbsp;Dashboard</span>
+                        </a>
+                    </li>
+                    {% if request.session.session_key  %}
+
+                    <li>
+                        <a href="{% url 'logout' %}">
+                            <i class="fa fa-angle-right"></i>
+                            <span class="link-title">&nbsp;Logout</span>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'login' %}">
+                            <i class="fa fa-angle-right"></i>
+                            <span class="link-title">&nbsp;Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'signup' %}">
+                            <i class="fa fa-angle-right"></i>
+                            <span class="link-title">&nbsp;Register</span>
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <!-- /#menu -->
+            </div>
+            <!-- /#left -->
+            <div id="content" class="bg-container">
+                <header class="head">
+                    <div class="main-bar row">
+                        <div class="col-xs-6">
+                            <h4 class="m-t-5">
+                                <i class="fa fa-home"></i>
+                                Dashboard
+                            </h4>
+                        </div>
+                    </div>
+                </header>
+                <h3 class="mt-3 text-success">{{msg}}</h3>
+                        <div class="row">
+                            <div class="col-lg-4 col-xs-12 m-t-10">
+                                <div class="card">
+                                    <div class="card-header bg-white">
+                                        <div class=" twitter_section_head">
+                                            Profile Details
+                                   
+                                        </div>
+                                    </div>
+                                    <div class="card-block twitter_section">
+                                        <ul id="nt-example1">
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-xs-2 col-lg-3 col-xl-2">
+                                                        <img src="{{ usr.propic.url }}" alt="" srcset="" style="min-height: 200px; min-width: 300px; max-height: 200px; max-width: 300px;">
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-xs-10 col-lg-9 col-xl-10">
+                                                        <span class="name">Salution:</span>
+                                                        <br>
+                                                        <span class="msg">{{ usr.user_type | capfirst }}</span>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-xs-10 col-lg-9 col-xl-10">
+                                                        <span class="name">Username:</span>
+                                                        <br>
+                                                        <span class="msg">{{ usr.username }}</span>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-xs-10 col-lg-9 col-xl-10">
+                                                        <span class="name">First Name:</span>
+                                                        <br>
+                                                        <span class="msg">{{ usr.first_name }}</span>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-xs-10 col-lg-9 col-xl-10">
+                                                        <span class="name">Last Name:</span>
+                                                        <br>
+                                                        <span class="msg">{{ usr.last_name }}</span>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-xs-10 col-lg-9 col-xl-10">
+                                                        <span class="name">Email:</span>
+                                                        <br>
+                                                        <span class="msg">{{ usr.email }}</span>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="col-lg-5 col-xs-12 m-t-10">
+                                        <div class="block widget-notes">
+                                            <div class="card" id="notes_section">
+                                                <div class="card-header bg-white">
+                                                    Address Details
+                                                </div>
+                                                <div class="content">
+                                                    <div class="notes" contenteditable="true">
+                                                        <div>
+                                                            <b> Address Line1: </b>
+                                                            <br>
+                                                            {{ usr.address }}
+                                                       
+                                                            <br>
+                                                            <b> City: </b>
+                                                       
+                                                            <br>
+                                                            {{ usr.city }}
+                                                       
+                                                            <br>
+                                                            <b> State: </b>
+                                                            <br>
+                                                            {{ usr.state }}
+                                                       
+                                                            <br>
+                                                            <b> Pincode: </b>
+                                                       
+                                                            <br>
+                                                            {{ usr.pincode }}
+                                                            <br>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.inner -->
+                    </div>
+                    <!-- /.outer -->
+                </div>
+                <!-- /#content -->
+            </div>
+        </div>
+        <!--wrapper-->
+        <div id="right">
+            <div class="right_content">
+                <div class="alert alert-success white_txt">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <strong>Welcome Micheal
+                   
+                        <br />
+                    </strong>Set Your Skin Here. Checkout Admin Statistics. Good Day!.
+           
+                </div>
+                <div class="well well-small dark">
+                    <div class="xs_skin_hide hidden-sm-up toggle-right"><i class="fa fa-cog"></i></div>
+                    <h4 class="brown_txt">
+                        <span class="fa-stack fa-sm">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-paint-brush fa-stack-1x fa-inverse"></i>
+                        </span>
+                        Skins
+                    </h4>
+                    <br />
+                    <div class="skinmulti_btn" onclick="javascript:loadjscssfile('blue_black_skin.html','css')">
+                        <div class="skin_blue skin_size"></div>
+                        <div class="skin_black skin_size"></div>
+                    </div>
+                    <div class="skinmulti_btn" onclick="javascript:loadjscssfile('green_black_skin.html','css')">
+                        <div class="skin_green skin_size"></div>
+                        <div class="skin_black skin_size"></div>
+                    </div>
+                    <div class="skinmulti_btn" onclick="javascript:loadjscssfile('purple_black_skin.html','css')">
+                        <div class="skin_purple skin_size"></div>
+                        <div class="skin_black skin_size"></div>
+                    </div>
+                    <div class="skinmulti_btn" onclick="javascript:loadjscssfile('orange_black_skin.html','css')">
+                        <div class="skin_orange skin_size"></div>
+                        <div class="skin_black skin_size"></div>
+                    </div>
+                    <div class="skinmulti_btn" onclick="javascript:loadjscssfile('red_black_skin.html','css')">
+                        <div class="skin_red skin_size"></div>
+                        <div class="skin_black skin_size"></div>
+                    </div>
+                    <div class="skinmulti_btn" onclick="javascript:loadjscssfile('mint_black_skin.html','css')">
+                        <div class="skin_mint skin_size"></div>
+                        <div class="skin_black skin_size"></div>
+                    </div>
+                    <div class="skinmulti_btn" onclick="javascript:loadjscssfile('brown_black_skin.html','css')">
+                        <div class="skin_brown skin_size"></div>
+                        <div class="skin_black skin_size"></div>
+                    </div>
+                    <div class="skinmulti_btn" onclick="javascript:loadjscssfile('black_skin.html','css')">
+                        <div class="skin_black skin_size"></div>
+                        <div class="skin_black skin_size"></div>
+                    </div>
+                    <div class="skin_btn skin_blue" onclick="javascript:loadjscssfile('blue_skin.html','css')"></div>
+                    <div class="skin_btn skin_green" onclick="javascript:loadjscssfile('green_skin.html','css')"></div>
+                    <div class="skin_btn skin_purple" onclick="javascript:loadjscssfile('purple_skin.html','css')"></div>
+                    <div class="skin_btn skin_orange" onclick="javascript:loadjscssfile('orange_skin.html','css')"></div>
+                    <div class="skin_btn skin_red" onclick="javascript:loadjscssfile('red_skin.html','css')"></div>
+                    <div class="skin_btn skin_mint" onclick="javascript:loadjscssfile('mint_skin.html','css')"></div>
+                    <div class="skin_btn skin_brown" onclick="javascript:loadjscssfile('brown_skin.html','css')"></div>
+                    <div class="skin_btn skin_black" onclick="javascript:loadjscssfile('black_skin.html','css')"></div>
+                </div>
+                <div class="well well-small dark">
+                    <h4 class="brown_txt margin15_bottom">
+                        <img src="img/admin.jpg" width="32" height="32" class="rounded-circle avatar-img" alt="avatar">
+                        &nbsp;Admin
+                    Statistics</h4>
+                    <br />
+                    <ul class="list-unstyled">
+                        <li class="green_txt margin15_bottom">
+                            <span class="fa-stack fa-sm">
+                                <i class="fa fa-circle fa-stack-2x text-mint"></i>
+                                <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+                            </span>&nbsp; Last Login
+                       
+                            <span class="inlinesparkline float-xs-right">2hrs Back</span>
+                        </li>
+                        <li class="warning_txt margin15_bottom">
+                            <span class="fa-stack fa-sm">
+                                <i class="fa fa-circle fa-stack-2x text-brown"></i>
+                                <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                            </span>&nbsp; Pending Tasks
+                       
+                            <span class="dynamicsparkline float-xs-right">12</span>
+                        </li>
+                        <li class="primary_txt margin15_bottom">
+                            <span class="fa-stack fa-sm">
+                                <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                                <i class="fa fa-cloud fa-stack-1x fa-inverse"></i>
+                            </span>&nbsp; Weather Today
+                       
+                            <span class="dynamicbar float-xs-right">Rainy</span>
+                        </li>
+                        <li class="margin15_bottom">
+                            <span class="fa-stack fa-sm">
+                                <i class="fa fa-circle fa-stack-2x text-brown"></i>
+                                <i class="fa fa-calendar fa-stack-1x fa-inverse"></i>
+                            </span>&nbsp; Events
+                       
+                            <span class="inlinebar float-xs-right">Team Out</span>
+                        </li>
+                        <li class="success_txt margin15_bottom">
+                            <span class="fa-stack fa-sm">
+                                <i class="fa fa-circle fa-stack-2x text-success"></i>
+                                <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
+                            </span>&nbsp; Notifications
+                       
+                            <span class="inlinebar float-xs-right">5</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="well well-small dark right_progressbar_section">
+                    <h4 class="brown_txt">
+                        <span class="fa-stack fa-sm">
+                            <i class="fa fa-circle fa-stack-2x text-brown"></i>
+                            <i class="fa fa-hand-o-down fa-stack-1x fa-inverse"></i>
+                        </span>
+                        Alerts
+                    </h4>
+                    <br />
+                    <span>Sales Improvement</span>
+                    <span class="float-xs-right">
+                        <small>20%</small>
+                    </span>
+                    <div class="progress xs">
+                        <progress class="progress progress-striped progress-primary" value="20" max="100"></progress>
+                    </div>
+                    <span>Server Load</span>
+                    <span class="float-xs-right">
+                        <small>80%</small>
+                    </span>
+                    <div class="progress xs">
+                        <progress class="progress  progress-striped progress-mint" value="80" max="100"></progress>
+                    </div>
+                    <span>Traffic Improvement</span>
+                    <span class="float-xs-right">
+                        <small>55%</small>
+                    </span>
+                    <div class="progress xs">
+                        <progress class="progress  progress-striped progress-danger" value="55" max="100"></progress>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- # right side -->
+    </div>
+   
+{% endblock main-content %}
