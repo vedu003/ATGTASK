@@ -1,0 +1,53 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block main-content %}
+
+
+<h1 style="text-align: center; color: #fff; padding-top: 2rem;"> Draft the Blog (Published by after) </h1>
+
+<div class="row pb-5">
+  <div class="col-7 align-self-center">
+      <style>td{padding-right:30px; padding-top: 30px; color: #fff; padding-left: 2rem;}</style>
+
+      <form method ="post" enctype="multipart/form-data">
+          {% csrf_token %}
+      <table>
+          
+          <tr>
+              <td><label for="title">Title of the Blog:</label></td>
+              <td><input class="form-control" type="text" name="title" value={{blog.title}} ></td>
+          </tr>
+  
+          <tr>
+              <td><label for="summary">Enter the Summary of Blog: </label></td>
+              <td><textarea class="form-control" id="summary" name="summary" rows="4" cols="50" >{{blog.summary}}</textarea></td>
+          </tr>
+  
+          <tr>
+              <td><label for="content">Enter the Content of Blog: </label></td>
+              <td><textarea class="form-control" id="content" name="content" rows="4" cols="50" >{{blog.summary}}</textarea></td>
+          </tr>
+  
+          <tr>
+            <td><label for="category">Select Category of Blog: </label></td>
+            <td> 
+                <select class="form-control" name="category" value={{blog.category}}>  
+                    {% for i in blogcat %}
+                        <option value = "{{i}}" {% if blog.category == i %} selected="selected" {% endif %}>{{i}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+        </tr>
+
+          <tr>
+              <td><label for="subincidenttypes">Draft or Not? :</label></td>
+              <td><input type="checkbox" name="draft" value="draft" checked></td>
+          </tr>
+  
+          <tr><td><input class="form-control btn btn-warning" type="submit" value="Submit"></td></tr>
+      </table>
+  
+      </form>
+  </div></div>
+  
+  {% endblock main-content %}

@@ -1,0 +1,48 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block main-content %}
+
+
+<h1 style="text-align: center; color: #fff; padding-top: 2rem;"> Type of Blog and Filter by Catgory </h1>
+<h3 class="" style="text-align: center; color: yellow; padding-top: 2rem;">{{msg}}</h3>
+
+<div class="portfolio-filter">
+<button type="button" class="active" data-filter="all">All Blogs</button>
+<button type="button" data-filter="Mental Health">Mental Health</button>
+<button type="button" data-filter="Heart Disease">Heart Disease</button>
+<button type="button" data-filter="Covid19">Covid19</button>
+<button type="button" data-filter="Immunization">Immunization</button>
+</div>
+
+<div class="container disblog">
+    {% if blogs %}
+    {% for bg in blogs  %}
+    <div class="card" data-category="{{bg.category}}">
+      <div class="card-header">
+        <img src="{{bg.blogpic.url}}" alt="rover" />
+      </div>
+      <div class="card-body">
+        <span class="tag tag-teal">{{bg.category}}</span>
+        <h4 class="mt-2">
+            {{bg.title}}
+        </h4>
+        <p class="blog-card-description">    
+            {{bg.summary}}
+        </p>
+        <div class="user">
+          <img src="{{bg.user.propic.url}}" alt="user" />
+          <div class="user-info">
+            <h5>{{bg.user.first_name}} {{bg.user.last_name}} | {{bg.user.user_type | capfirst}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div>
+      <h1 style="text-align: center; color: yellow; padding-top: 2rem;"> we does not Create any Blog.</h1>
+    </div>
+  {% endif %}
+</div>
+
+{% endblock main-content %}

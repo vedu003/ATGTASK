@@ -93,10 +93,137 @@ def logout(request):
     else:
         return redirect('login')
 
+
+
 def home(request):
     if request.session.get('vendor') == None:
         return redirect('login')
 
     cuser = request.session.get('vendor_email')
-    usr = CustomUser.objects.get(email=cuser)
-    return render(request, 'app/index.html',{'usr':usr})
+    user = CustomUser.objects.get(email=cuser)
+    user_type = user.user_type
+
+    return render(request, 'app/index.html',{'usr':user, 'user_type':user_type})
+
+def createblog(request):
+    if request.session.get('vendor') == None:
+        return redirect('login')
+
+    cuser = request.session.get('vendor_email')
+    user = CustomUser.objects.get(email=cuser)
+    user_type = user.user_type
+
+    if request.method == 'POST':
+        title = request.POST['title']
+        summary = request.POST['summary']
+        content = request.POST['content']
+        blogpic = request.FILES['blogpic']
+        category = request.POST['category']
+
+        cuser = request.session.get('vendor_email')
+        user = CustomUser.objects.get(email=cuser)
+
+        if request.POST.get('draft',''):
+                draft = True
+        else:
+            draft = False
+
+        Blog(user=user,title=title, summary=summary,  content=content, category = category,
+                 blogpic=blogpic,draft=draft).save()
+
+        if draft == False:
+            msg = 'Your Blog is Successfully Created.'
+            blogs = Blog.objects.all()
+            return render(request, 'app/displayblog.html',{'msg':msg,'blogs':blogs,'user_type':user_type})
+        else:
+            msg = 'Your Blog is Drafted.'
+            blogs = Blog.objects.filter(draft = True)
+            return render(request, 'app/draft.html',{'msg':msg,'blogs':blogs,'user_type':user_type})
+
+
+    return render(request, 'app/createblog.html',{'user_type':user_type})
+
+def displayblogs(request):
+    if request.session.get('vendor') == None:
+        return redirect('login')
+
+    blogs = Blog.objects.filter(draft = False)
+    cuser = request.session.get('vendor_email')
+    user = CustomUser.objects.get(email=cuser)
+    user_type = user.user_type
+
+    return render(request, 'app/displayblog.html',{'blogs':blogs,'user_type':user_type})
+
+def mycurrblog(request):
+    if request.session.get('vendor') == None:
+        return redirect('login')
+
+    cuser = request.session.get('vendor_email')
+    user = CustomUser.objects.get(email=cuser)
+    blogs = Blog.objects.filter(user=user)
+    user_type = user.user_type
+
+    return render(request, 'app/mycurrblog.html',{'blogs':blogs,'user_type':user_type})
+
+def draft(request):
+    if request.session.get('vendor') == None:
+        return redirect('login')
+
+    blogs = Blog.objects.filter(draft = True)
+    cuser = request.session.get('vendor_email')
+    user = CustomUser.objects.get(email=cuser)
+    user_type = user.user_type
+
+    return render(request, 'app/draft.html',{'blogs':blogs,'user_type':user_type})
+
+def editdraft(request,id):
+    if request.session.get('vendor') == None:
+        return redirect('login')
+
+    blogcat = ['Mental Health','Heart Disease','Covid19','Immunization']
+
+    blog = Blog.objects.get(id=id)
+    cuser = request.session.get('vendor_email')
+    user = CustomUser.objects.get(email=cuser)
+    user_type = user.user_type
+
+
+    if request.method == 'POST':
+        blog.title = request.POST['title']
+        blog.summary = request.POST['summary']
+        blog.content = request.POST['content']
+        blog.category = request.POST['category']
+
+        if request.POST.get('draft',''):
+                draft = True
+        else:
+            draft = False
+
+        blog.draft = draft
+        blog.save()
+
+        if draft == False:
+            msg = 'Your Blog is Successfully Created.'
+            blogs = Blog.objects.all()
+            return render(request, 'app/displayblog.html',{'msg':msg,'blogs':blogs,'user_type':user_type})
+        else:
+            msg = 'Your Blog is Drafted.'
+            blogs = Blog.objects.filter(draft = True)
+            return render(request, 'app/draft.html',{'msg':msg,'blogs':blogs,'user_type':user_type})
+
+    return render(request, 'app/editdraft.html',{'blog':blog,'user_type':user_type, 'blogcat':blogcat})
+
+
+def delblog(request,id):
+    if request.session.get('vendor') == None:
+        return redirect('login')
+
+    blog = Blog.objects.get(id=id)
+    blog.delete()
+
+    cuser = request.session.get('vendor_email')
+    user = CustomUser.objects.get(email=cuser)
+    blogs = Blog.objects.filter(user=user)
+    user_type = user.user_type
+
+    return render(request, 'app/mycurrblog.html',{'blogs':blogs,'user_type':user_type})

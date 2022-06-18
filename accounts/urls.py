@@ -9,7 +9,12 @@ urlpatterns = [
     path('login/',views.login,name='login'),
     path('logout/',views.logout,name='logout'),
     path('home/',views.home,name='home'),
-
+    path('createblog/',views.createblog,name='createblog'),
+    path('displayblogs/',views.displayblogs,name='displayblogs'),
+    path('draft/',views.draft,name='draft'),
+    path('editdraft/<int:id>/',views.editdraft,name='editdraft'),
+    path('mycurrblog/',views.mycurrblog,name='mycurrblog'),
+    path('delblog/<int:id>/',views.delblog,name='delblog'),
 ]
 if settings.DEBUG:
     urlpatterns += staticfiles_urlpatterns()

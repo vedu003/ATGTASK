@@ -1,0 +1,41 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block main-content %}
+
+
+<h1 style="text-align: center; color: #fff; padding-top: 2rem;"> Draft the Blog (Published by after) </h1>
+
+<div class="container disblog">
+  {% if blogs %}
+  {% for bg in blogs  %}
+  <div class="card" data-category="{{blog.categoryofblog}}">
+    <div class="card-header">
+      <img src="{{bg.blogpic.url}}" alt="rover" />
+    </div>
+    <div class="card-body">
+      <span class="tag tag-teal">{{bg.category}}</span>
+      <h4 class="mt-2">
+          {{bg.title}}
+      </h4>
+      <p class="blog-card-description">    
+          {{bg.summary}}
+      </p>
+      <div class="user">
+        <img src="{{bg.user.propic.url}}" alt="user" />
+        <div class="user-info">
+          <h5>{{bg.user.first_name}} {{bg.user.last_name}} | {{bg.user.user_type | capfirst}}</h5>
+          <a href="{% url 'editdraft' bg.id %}" class="pen"><i class="fas fa-pen"></i> Edit Draft </a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  {% else %}
+  <div>
+    <h1 style="text-align: center; color: yellow; padding-top: 2rem;"> We can not create any Draft.</h1>
+  </div>
+{% endif %}
+</div>
+
+{% endblock main-content %}
